@@ -37,8 +37,8 @@ body {
 }
 
 .fa-quote-left,
-.fa-quote-left {
-  font-size: 4rem;
+.fa-quote-right {
+  font-size: $fonte-grande;
 }
 
 .quote-author {
@@ -46,6 +46,73 @@ body {
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
+}
+
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: $borda-redonda;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  padding: 0.5em 1.8em;
+  box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+  }
+}
+.twitter-button {
+  &:hover {
+    color: #38a1f3;
+  }
+}
+
+.fa-twitter {
+  font-size: 1.5rem;
+}
+
+.loader {
+  // display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #333;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @import 'media';
